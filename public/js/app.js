@@ -6,6 +6,8 @@ const bonkSound = document.querySelector('audio');
 const startScreen = document.querySelector('.start-screen');
 const showScore = document.querySelector('.show-score');
 
+const clickEventType = ((document.ontouchstart!==null)?'click':'touchstart');
+
 let score = 0;
 let lastHole;
 let timeUp = false;
@@ -52,12 +54,10 @@ function start() {
   setTimeout(() => {
     timeUp = true;
     startScreen.classList.remove('hide');
-
-    if (score > 0) {
-      showScore.classList.add('show');
-      const message = 'Your score: ' + score + (score >= 10 ? " GREAT!" : '');
-      showScore.textContent = message;
-    }
+    showScore.classList.add('show');
+    const message = 'Your score: ' + score + (score <= 10 ? " SORRRRRY!!!" : '');
+    showScore.textContent = message;
+    gameFinished(score);
 
   }, 10000);
 }
@@ -73,7 +73,13 @@ function bonk(e) {
 }
 
 moles.forEach(mole => {
-  mole.addEventListener('click', bonk);
+  mole.addEventListener(clickEventType, bonk);
 });
 
 btnStart.addEventListener('click', start);
+
+function gameFinished(score) {
+  var httpRequest = new XMLHttpRequest();
+  httpRequest.open("GET", "submitExplode/"+score+location.search, true);
+  httpRequest.send(null);
+}
