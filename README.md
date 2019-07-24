@@ -8,7 +8,7 @@ this existing [Whack-a-mole game][].
 The example demostrates how to use [Botgram][]'s API for the gaming platform,
 and the deployment needed for Telegram games in general.
 
-![Game screenshot](https://i.imgur.com/D7r4TMj.png)
+![Game screenshot](https://i.imgur.com/r9rN5Xi.png)
 
 There's a Telegram bot and a webserver working in unison. The webserver
 needs to be reachable under some public URL so that users can open the game,
