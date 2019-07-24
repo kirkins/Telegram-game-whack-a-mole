@@ -8,7 +8,7 @@ this existing [Whack-a-mole game][].
 The example demostrates how to use [Botgram][]'s API for the gaming platform,
 and the deployment needed for Telegram games in general.
 
-![Game screenshot](https://i.imgur.com/M7pG4Pj.png)
+![Game screenshot](https://imgur.com/a/D7r4TMj)
 
 There's a Telegram bot and a webserver working in unison. The webserver
 needs to be reachable under some public URL so that users can open the game,
@@ -62,4 +62,5 @@ Interesting things to implement:
 [Botgram]: https://botgram.js.org
 [gaming platform]: https://core.telegram.org/bots/games
 [Whack-a-mole game]: https://github.com/alekseylovchikov/whack-a-mole
+[Botgram Explode Game]: https://github.com/botgram/explode-game-bot
 [Try it on Telegram]: http://t.me/gamergurlbot
