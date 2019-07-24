@@ -1,4 +1,4 @@
-# Whack-a-mole Game Bot
+# Telegram Whack-a-mole Game Bot
 
 [Try it on Telegram][].
 
